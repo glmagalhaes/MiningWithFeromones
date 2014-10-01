@@ -55,7 +55,7 @@ var self.gradient = 0;
             <string>var i, j;
 var candidate_x = 0;
 var candidate_y = 0;
-var candidate_gradient = self.gradient;
+var candidate_gradient = 0;
 
 if(self.cargo == false){
     if(self.delay_direction &lt;= 0){
@@ -69,9 +69,49 @@ if(self.cargo == false){
         self.delay_direction = 10;
     }else{
         self.delay_direction -=1;
-        for(i=-1 ; i&lt;2 ; i+=1){
-            for(j=-1 ; j&lt;2 ; j+=1){
-                if(candidate_gradient &lt; gradiente((self.x + i*4),(self.y + j*4))){
+/*        if candidate_gradient &lt; gradiente((self.x),(self.y - 4)){
+            candidate_x = self.x;
+            candidate_y = self.y - 10;
+            candidate_gradient = gradiente(candidate_x, candidate_y);
+        }
+        if candidate_gradient &lt; gradiente((self.x - 4),(self.y - 4)){
+            candidate_x = self.x - 10;
+            candidate_y = self.y - 10;
+            candidate_gradient = gradiente(candidate_x, candidate_y);
+        }
+        if candidate_gradient &lt; gradiente((self.x - 4),(self.y)){
+            candidate_x = self.x - 10;
+            candidate_y = self.y;
+            candidate_gradient = gradiente(candidate_x, candidate_y);
+        }
+        if candidate_gradient &lt; gradiente((self.x - 4),(self.y + 4)){
+            candidate_x = self.x - 10;
+            candidate_y = self.y + 10;
+            candidate_gradient = gradiente(candidate_x, candidate_y);
+        }
+        if candidate_gradient &lt; 1000 - sqrt(power((self.x-global.base_x), 2)+power((self.y-global.base_y+4), 2)){
+            candidate_x = self.x;
+            candidate_y = self.y + 10;
+            candidate_gradient = gradiente(candidate_x, candidate_y);
+        }
+        if candidate_gradient &lt; gradiente((self.x + 4),(self.y - 4)){
+            candidate_x = self.x + 10;
+            candidate_y = self.y - 10;
+            candidate_gradient = gradiente(candidate_x, candidate_y);
+        }
+        if candidate_gradient &lt; gradiente((self.x + 4),(self.y)){
+            candidate_x = self.x + 10;
+            candidate_y = self.y;
+            candidate_gradient = gradiente(candidate_x, candidate_y);
+        }
+        if candidate_gradient &lt; gradiente((self.x + 4),(self.y + 4)){
+            candidate_x = self.x + 10;
+            candidate_y = self.y + 10;
+            candidate_gradient = gradiente(candidate_x, candidate_y);
+        }*/
+        for(i =- 1 ; i&lt;2 ; i += 1){
+            for(j =- 1 ; j&lt;2 ; j += 1){
+                if(candidate_gradient &lt; 1000 - sqrt(power((self.x - global.base_x + i*4), 2)+power((self.y-global.base_y + j*4), 2))){
                     candidate_x = self.x + i*4;
                     candidate_y = self.y + j*4;
                     candidate_gradient = gradiente(candidate_x, candidate_y);
