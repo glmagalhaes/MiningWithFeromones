@@ -69,49 +69,9 @@ if(self.cargo == false){
         self.delay_direction = 10;
     }else{
         self.delay_direction -=1;
-/*        if candidate_gradient &lt; gradiente((self.x),(self.y - 4)){
-            candidate_x = self.x;
-            candidate_y = self.y - 10;
-            candidate_gradient = gradiente(candidate_x, candidate_y);
-        }
-        if candidate_gradient &lt; gradiente((self.x - 4),(self.y - 4)){
-            candidate_x = self.x - 10;
-            candidate_y = self.y - 10;
-            candidate_gradient = gradiente(candidate_x, candidate_y);
-        }
-        if candidate_gradient &lt; gradiente((self.x - 4),(self.y)){
-            candidate_x = self.x - 10;
-            candidate_y = self.y;
-            candidate_gradient = gradiente(candidate_x, candidate_y);
-        }
-        if candidate_gradient &lt; gradiente((self.x - 4),(self.y + 4)){
-            candidate_x = self.x - 10;
-            candidate_y = self.y + 10;
-            candidate_gradient = gradiente(candidate_x, candidate_y);
-        }
-        if candidate_gradient &lt; 1000 - sqrt(power((self.x-global.base_x), 2)+power((self.y-global.base_y+4), 2)){
-            candidate_x = self.x;
-            candidate_y = self.y + 10;
-            candidate_gradient = gradiente(candidate_x, candidate_y);
-        }
-        if candidate_gradient &lt; gradiente((self.x + 4),(self.y - 4)){
-            candidate_x = self.x + 10;
-            candidate_y = self.y - 10;
-            candidate_gradient = gradiente(candidate_x, candidate_y);
-        }
-        if candidate_gradient &lt; gradiente((self.x + 4),(self.y)){
-            candidate_x = self.x + 10;
-            candidate_y = self.y;
-            candidate_gradient = gradiente(candidate_x, candidate_y);
-        }
-        if candidate_gradient &lt; gradiente((self.x + 4),(self.y + 4)){
-            candidate_x = self.x + 10;
-            candidate_y = self.y + 10;
-            candidate_gradient = gradiente(candidate_x, candidate_y);
-        }*/
         for(i =- 1 ; i&lt;2 ; i += 1){
             for(j =- 1 ; j&lt;2 ; j += 1){
-                if(candidate_gradient &lt; 1000 - sqrt(power((self.x - global.base_x + i*4), 2)+power((self.y-global.base_y + j*4), 2))){
+                if(candidate_gradient &lt; 1000 - sqrt(power((self.x - global.base_x + i*4), 2)+power((self.y - global.base_y + j*4), 2))){
                     candidate_x = self.x + i*4;
                     candidate_y = self.y + j*4;
                     candidate_gradient = gradiente(candidate_x, candidate_y);
@@ -120,7 +80,7 @@ if(self.cargo == false){
                 }
             }
         }
-        move_towards_point(candidate_x, candidate_y, 4);
+        //move_towards_point(candidate_x, candidate_y, 4);
     }
 }
 self.gradient = gradiente(self.x,self.y);
@@ -129,6 +89,94 @@ image_angle = direction;
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>cargo</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>true</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>121</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_potential_step</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>candidate_x</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>candidate_y</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>4</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="4" ename="wall_obj">
