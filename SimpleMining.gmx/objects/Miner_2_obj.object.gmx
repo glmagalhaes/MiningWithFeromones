@@ -69,12 +69,12 @@ if(self.cargo == false){
         self.delay_direction = 10;
     }else{
         self.delay_direction -=1;
-        for(i =- 1 ; i&lt;2 ; i += 1){
-            for(j =- 1 ; j&lt;2 ; j += 1){
-                if(candidate_gradient &lt; 1000 - sqrt(power((self.x - global.base_x + i*4), 2)+power((self.y - global.base_y + j*4), 2))){
-                    candidate_x = self.x + i*4;
-                    candidate_y = self.y + j*4;
-                    candidate_gradient = gradiente(candidate_x, candidate_y);
+        for(i = -2 ; i&lt;3 ; i += 1){
+            for(j = -2 ; j&lt;3 ; j += 1){
+                if(candidate_gradient &lt;= (1000 - sqrt(power((self.x - global.base_x + i*2), 2)+power((self.y - global.base_y + j*2), 2)))){
+                    candidate_x = self.x + i*20;
+                    candidate_y = self.y + j*20;
+                    candidate_gradient = (1000 - sqrt(power((self.x - global.base_x + i*2), 2)+power((self.y - global.base_y + j*2), 2)));
                     show_debug_message(candidate_x);
                     show_debug_message(candidate_y);
                 }
