@@ -78,8 +78,8 @@ if(self.cargo == false){
                     candidate_x = self.x + i*20;
                     candidate_y = self.y + j*20;
                     candidate_gradient = (1000 - sqrt(power((self.x - global.base_x + i*2), 2)+power((self.y - global.base_y + j*2), 2)));
-                    show_debug_message(candidate_x);
-                    show_debug_message(candidate_y);
+//                    show_debug_message(candidate_x);
+//                    show_debug_message(candidate_y);
                 }
             }
         }
@@ -517,6 +517,7 @@ if(self.cargo == false){
           <argument>
             <kind>1</kind>
             <string>if(self.cargo == true){
+    global.minchanger=1;
     other.minerals += 1;
     self.cargo = false;
     self.image_index = 0;

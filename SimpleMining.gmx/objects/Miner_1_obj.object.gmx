@@ -164,6 +164,7 @@ image_angle = direction;
           <argument>
             <kind>1</kind>
             <string>if(self.cargo == true){
+    global.minchanger=1;
     other.minerals += 1;
     self.cargo = false;
     self.image_index = 0;

@@ -8,4 +8,3 @@ if(Mine_obj.minerals > 0){
 }else{
     return false;
 }
-

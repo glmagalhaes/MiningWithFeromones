@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var self.minerals = 1+floor(random(10));
+            <string>var self.minerals = 5+floor(random(10));
 
 </string>
           </argument>
