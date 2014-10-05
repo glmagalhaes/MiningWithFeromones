@@ -85,7 +85,7 @@ if(global.minchanger==1){
     global.minchanger=0;
 }
 
-if(self.minerals &gt;= global.max_minerals){
+if(self.minerals &gt;= global.total_minerals){
     show_message(global.time);
     room_goto(menu_room);
 }

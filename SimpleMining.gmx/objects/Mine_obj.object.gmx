@@ -31,6 +31,7 @@ if i = 0 {
 }else {
     var self.minerals = global.min_minerals+floor(random(i));
 }
+global.total_minerals += self.minerals;
 </string>
           </argument>
         </arguments>

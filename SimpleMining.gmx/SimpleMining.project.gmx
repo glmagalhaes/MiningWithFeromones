@@ -48,14 +48,14 @@
     <object>objects\more_ships_obj</object>
     <object>objects\more_mines_obj</object>
     <object>objects\more_min_minerals_obj</object>
+    <object>objects\about_obj</object>
+    <object>objects\back_to_menu_obj</object>
+    <object>objects\ok_button_obj</object>
     <object>objects\labels_ships_obj</object>
     <object>objects\label_ship_type_obj</object>
     <object>objects\lables_mines_obj</object>
     <object>objects\label_min_minerals_obj</object>
     <object>objects\label_max_minerals_obj</object>
-    <object>objects\ok_button_obj</object>
-    <object>objects\back_to_menu_obj</object>
-    <object>objects\about_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu_room</room>
