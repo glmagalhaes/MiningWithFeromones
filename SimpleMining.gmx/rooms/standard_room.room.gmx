@@ -11,7 +11,7 @@
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code>for(i=0;i&lt;global.mines;i++){
-    action_create_object(Mine_obj,random(900)+40,random(700)+40);
+    action_create_object(Mine_obj,random(900)+40,random(680)+40);
 }</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>

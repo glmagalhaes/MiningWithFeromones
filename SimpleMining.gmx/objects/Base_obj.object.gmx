@@ -31,8 +31,28 @@ var global.base_x = self.x;
 var global.base_y = self.y
 var self.minerals = 0;
 random_set_seed(current_second);
-for(i=0;i&lt;global.ships;i++){
-    action_create_object(Miner_4_obj,self.x,self.y);
+
+switch global.ship_type{
+    case 0 :
+        for(i=0;i&lt;global.ships;i++){
+            action_create_object(Miner_1_obj,self.x,self.y);
+        }
+        break;
+    case 1 :
+        for(i=0;i&lt;global.ships;i++){
+            action_create_object(Miner_2_obj,self.x,self.y);
+        }
+        break;
+    case 2 :
+        for(i=0;i&lt;global.ships;i++){
+            action_create_object(Miner_3_obj,self.x,self.y);
+        }
+        break;
+    case 3 :
+        for(i=0;i&lt;global.ships;i++){
+            action_create_object(Miner_4_obj,self.x,self.y);
+        }
+        break;
 }
 /*for(i=0;i&lt;random(10);i++){
     action_create_object(Miner_4_obj,self.x,self.y);
@@ -63,6 +83,11 @@ for(i=0;i&lt;global.ships;i++){
 if(global.minchanger==1){
     show_debug_message(global.time);
     global.minchanger=0;
+}
+
+if(self.minerals &gt;= global.max_minerals){
+    show_message(global.time);
+    room_goto(menu_room);
 }
 </string>
           </argument>
