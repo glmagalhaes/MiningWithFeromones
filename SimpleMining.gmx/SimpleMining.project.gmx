@@ -14,9 +14,11 @@
     <sprite>sprites\left_spr</sprite>
     <sprite>sprites\right_spr</sprite>
     <sprite>sprites\ok_button</sprite>
+    <sprite>sprites\about_spr</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Menu_TileSet_bkg</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -52,11 +54,14 @@
     <object>objects\label_min_minerals_obj</object>
     <object>objects\label_max_minerals_obj</object>
     <object>objects\ok_button_obj</object>
+    <object>objects\back_to_menu_obj</object>
+    <object>objects\about_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu_room</room>
     <room>rooms\room0</room>
     <room>rooms\standard_room</room>
+    <room>rooms\about_room</room>
   </rooms>
   <constants number="2">
     <constant name="GM_build_date">41912.2358897685</constant>

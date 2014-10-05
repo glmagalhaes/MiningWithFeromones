@@ -71,6 +71,7 @@ var global.max_minerals = 10;</code>
     <instance objName="label_ship_type_obj" x="448" y="176" name="inst_2A4C2C60" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="less_ship_type_obj" x="224" y="160" name="inst_B7418513" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="more_ship_stype_obj" x="608" y="160" name="inst_024DFB80" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="about_obj" x="416" y="32" name="inst_E903E5CD" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="Menu_TileSet_bkg" x="288" y="224" w="32" h="32" xo="0" yo="0" id="10000001" name="inst_67638791" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
