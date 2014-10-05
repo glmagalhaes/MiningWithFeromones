@@ -25,8 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var self.minerals = 5+floor(random(10));
-
+            <string>var i = global.max_minerals - global.min_minerals;
+if i = 0 {
+    var self.minerals = global.min_minerals;
+}else {
+    var self.minerals = global.min_minerals+floor(random(i));
+}
 </string>
           </argument>
         </arguments>

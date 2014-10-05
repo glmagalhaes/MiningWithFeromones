@@ -11,8 +11,13 @@
     <sprite>sprites\Base_spr</sprite>
     <sprite>sprites\wall_spr</sprite>
     <sprite>sprites\Feromone_spr</sprite>
+    <sprite>sprites\left_spr</sprite>
+    <sprite>sprites\right_spr</sprite>
+    <sprite>sprites\ok_button</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\Menu_TileSet_bkg</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\Mine.gml</script>
@@ -31,9 +36,24 @@
     <object>objects\Base_obj</object>
     <object>objects\wall_obj</object>
     <object>objects\Feromone_obj</object>
+    <object>objects\less_ships_obj</object>
+    <object>objects\less_mines_obj</object>
+    <object>objects\less_min_minerals_obj</object>
+    <object>objects\less_max_minerals_obj</object>
+    <object>objects\more_ships_obj</object>
+    <object>objects\more_mines_obj</object>
+    <object>objects\more_min_minerals_obj</object>
+    <object>objects\more_max_minerals_obj</object>
+    <object>objects\labels_ships_obj</object>
+    <object>objects\lables_mines_obj</object>
+    <object>objects\label_min_minerals_obj</object>
+    <object>objects\label_max_minerals_obj</object>
+    <object>objects\ok_button_obj</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\menu_room</room>
     <room>rooms\room0</room>
+    <room>rooms\standard_room</room>
   </rooms>
   <constants number="2">
     <constant name="GM_build_date">41912.2358897685</constant>
