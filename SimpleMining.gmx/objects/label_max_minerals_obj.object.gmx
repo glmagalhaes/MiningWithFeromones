@@ -69,7 +69,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var my_string = 'Minimum Number of minerals : ' + string(global.max_minerals)
+            <string>var my_string = 'Maximum Number of minerals : ' + string(global.max_minerals)
 draw_text(x, y, my_string);
 </string>
           </argument>
